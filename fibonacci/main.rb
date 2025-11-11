@@ -1,11 +1,9 @@
-#frozen_string_literal: true
+# frozen_string_literal: true
 
-STARTING_SEQUENCE = [0, 1]
+STARTING_SEQUENCE = [0, 1].freeze
 
 def fibs(size)
-  if size <= STARTING_SEQUENCE.size
-    return STARTING_SEQUENCE.take(size)
-  end
+  return STARTING_SEQUENCE.take(size) if size <= STARTING_SEQUENCE.size
 
   index = STARTING_SEQUENCE.size
   fibonacci = STARTING_SEQUENCE
